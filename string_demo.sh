@@ -1,7 +1,11 @@
 #!/usr/bin/env bash
 
-if [[ ${!aa} ]]; then
-  echo "存在aa变量"
+# if [[ -e $1 && -f $1]] ; then
+#   echo "$1 是文件"
+# fi
+
+if [[ -e $1 && -f $1 ]]; then
+  echo "$1 是文件"
 else
-  echo "不存在aa变量"
+  echo "$1 不是文件"
 fi
